@@ -1,0 +1,16 @@
+*.sqlite3
+*.pyc
+*.pyo
+
+__pycache__
+migrations
+wsgi.py
+settings.py
+
+/personal_page/static
+/_pycache_
+/Include
+/Lib
+/node_modules
+/Scripts
+/tcl
