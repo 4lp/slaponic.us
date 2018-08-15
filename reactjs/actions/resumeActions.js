@@ -8,7 +8,8 @@ export const RESUME_FAILURE = "RESUME_FAILURE"
 
 export function fetchResume() {
   return function (dispatch) {
-    let url = "http://slaponic.us/resume/"
+    //let url = "http://slaponic.us/resume/"
+    let url = "http://localhost:8000/resume/"
     dispatch({type: RESUME})
     return request(
       url, {},

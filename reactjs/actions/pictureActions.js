@@ -8,7 +8,8 @@ export const PICTURES_FAILURE = "PICTURES_FAILURE"
 
 export function fetchPictures() {
   return function (dispatch) {
-    let url = "http://slaponic.us/pictures/"
+    //let url = "http://slaponic.us/pictures/"
+    let url = "http://localhost:8000/pictures/"
     dispatch({type: PICTURES})
     return request(
       url, {},

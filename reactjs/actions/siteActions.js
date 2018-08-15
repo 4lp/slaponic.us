@@ -8,7 +8,8 @@ export const SITES_FAILURE = "SITES_FAILURE"
 
 export function fetchSites() {
   return function (dispatch) {
-    let url = "http://slaponic.us/sites/"
+    //let url = "http://slaponic.us/sites/"
+    let url = "http://localhost:8000/sites/"
     dispatch({type: SITES})
     return request(
       url, {},

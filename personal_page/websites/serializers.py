@@ -7,8 +7,9 @@ class WebsiteSerializer(serializers.Serializer):
 	link = serializers.CharField()
 	description = serializers.CharField()
 	#image = serializers.ImageField()
-	image = serializers.SerializerMethodField()
+	#image = serializers.SerializerMethodField()
+	image = serializers.CharField(max_length=1000)
 
-	def get_image(self, instance):
+	#def get_image(self, instance):
         # returning image url if there is an image else blank string
-		return instance.image.url if instance.image else ''
+		#return instance.image.url if instance.image else ''

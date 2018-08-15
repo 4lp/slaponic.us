@@ -1,0 +1,167 @@
+html, body { overflow-x: hidden; }
+
+html {
+	height: 100%;
+}
+
+body {
+	font-family: 'Inconsolata', monospace;
+	background-color: #FFFAFD;
+	height: 100%;
+}
+
+#App1 {
+	height: 100%;
+}
+
+p {
+	font-size: 15px;
+}
+
+a {
+	color: #00B57E;
+}
+
+a:hover {
+	text-decoration: none;
+	color: #ed3ddb;
+	transition: .3s;
+}
+
+button:focus {
+	outline: none;
+}
+
+button:hover {
+	color: #ed3ddb;
+	transition: .3s;
+}
+
+#wrapper:before
+{
+    float: left;
+    height: 100%;
+}
+#wrapper {
+    height: auto;
+    display: flex;
+}
+
+.sidebar {
+	min-height: 100vh;
+	height: 100%;
+	/*background-color:#FFFFFF;*/
+}
+.sidebar:after
+{
+    display: block;
+    clear: both;
+}
+
+.sidebar {
+	background: #FFFFFF;
+	background-image: url('https://i.imgur.com/8HnZoTd.png'),
+						url('https://i.imgur.com/4FObzQn.png');
+	background-size: 50px;
+	opacity: .15;
+	background-repeat: 
+	height: auto;
+	z-index:1;
+	-webkit-animation: snow 10s linear infinite;
+	-moz-animation: snow 10s linear infinite;
+	-ms-animation: snow 10s linear infinite;
+	animation: snow 10s linear infinite;
+}
+@keyframes snow {
+  0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
+  50% {background-position: 250px 250px, 50px 100px, -50px 75px;}
+  100% {background-position: 250px 500px, 100px 200px, -50px 150px;}
+}
+@-moz-keyframes snow {
+  0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
+  50% {background-position: 250px 250px, 50px 100px, -50px 75px;}
+  100% {background-position: 250px 500px, 100px 200px, -50px 150px;}
+}
+@-webkit-keyframes snow {
+  0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
+  50% {background-position: 250px 250px, 50px 100px, -50px 75px;}
+  100% {background-position: 250px 500px, 100px 200px, -50px 150px;}
+}
+@-ms-keyframes snow {
+  0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
+  50% {background-position: 250px 250px, 50px 100px, -50px 75px;}
+  100% {background-position: 250px 500px, 100px 200px, -50px 150px;}
+}	
+
+.foot {
+	position: fixed;
+	bottom: 0px;
+}
+
+.panel .body {
+	background-color: #FFFAFD;
+	margin: 0;
+}
+
+.panel .heading {
+	background-color: #FFFAFD;
+	margin: 0;
+}
+
+.panel .panel-default {
+	background-color: #FFFAFD;
+}
+
+.well {
+	margin-left: 10%;
+	margin-right: 10%;
+	background-color: #EDFFFA;
+}
+
+/* entire container, keeps perspective */
+.flip-container {
+	perspective: 1000px;
+}
+/* flip the pane when hovered */
+.flip-container:hover .flipper, .flip-container.hover .flipper {
+	transform: rotateY(180deg);
+}
+
+.flip-container, .front {
+	width: 320px;
+	height: 500px;
+	margin: 0 10% 10% 10%;
+}
+
+.back {
+	width: 320px;
+	height: 500px;
+	margin: 0 -10% 10% -10%;
+}
+
+/* flip speed goes here */
+.flipper {
+	transition: 0.6s;
+	transform-style: preserve-3d;
+	position: relative;
+}
+
+/* hide back of pane during swap */
+.front, .back {
+	backface-visibility: hidden;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+/* front pane, placed above back */
+.front {
+	z-index: 2;
+	/* for firefox 31 */
+	transform: rotateY(0deg);
+}
+
+/* back, initially hidden pane */
+.back {
+	transform: rotateY(180deg);
+}
