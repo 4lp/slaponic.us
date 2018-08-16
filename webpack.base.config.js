@@ -23,7 +23,12 @@ module.exports = {
   ], // add all common plugins here
 
   module: {
-    loaders: [] // add all common loaders here
+    loaders: [], // add all common loaders here
+    rules: {
+      test: /\.css$/,
+      use: [ 'style-loader', 'css-loader' ],
+      include: /node_modules/
+    }
   },
 
   resolve: {

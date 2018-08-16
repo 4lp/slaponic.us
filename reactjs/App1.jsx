@@ -13,6 +13,7 @@ import App1Container from "./containers/App1Container"
 import MenuHeadContainer from "./containers/MenuHeadContainer"
 import AboutMeContainer from "./containers/AboutMeContainer"
 import CreativeContainer from "./containers/CreativeContainer"
+import ContactContainer from "./containers/ContactContainer"
 
 
 let finalCreateStore = compose(
@@ -41,6 +42,17 @@ const styles = {
     borderRadius: "5px",
     maxWidth: "80%",
     maxHeight: "700px"
+  },
+  mainImgContainer: {
+    background: "url('http://slaponic.us/static/misc/static/pink_plane.jpg') left top no-repeat",
+    boxShadow: "25px 25px 50px 0 #FFFAFD inset, -25px -25px 50px 0 #FFFAFD inset",
+    marginLeft: "auto",
+    marginRight: "auto",
+    borderRadius: "5px",
+    maxWidth: "80%",
+    maxHeight: "700px",
+	width: "645px",
+	height: "700px"
   }
 }
 
@@ -86,11 +98,23 @@ class App1 extends React.Component {
       )
   }
 
+  renderContact() {
+    return (
+      <div>
+        <Provider store={store}>
+        <ContactContainer />
+        </Provider>
+      </div>
+      )
+  }
+
   renderHome() {
     return (
       <div className="text-center">
+		<h1>🌺</h1>
         <div>
-        <img className="mainimg" src="http://slaponic.us/static/misc/static/pink_plane.jpg" style={styles.mainImg}/>
+		{/*<img className="mainimg" src="http://slaponic.us/static/misc/static/pink_plane.jpg" style={styles.mainImg}/>*/}
+        <div className="mainimg" style={styles.mainImgContainer}/>
         </div>
       </div>
       )
@@ -111,6 +135,7 @@ class App1 extends React.Component {
       	        {this.state.active === "about" ? this.renderAbout() : null}
       	        {this.state.active === "web" ? this.renderSites() : null}
                 {this.state.active === "creative" ? this.renderCreative() : null}
+                {this.state.active === "contact" ? this.renderContact() : null}
                 {this.state.active === "" ? this.renderHome() : null}
               </div>
             </div>

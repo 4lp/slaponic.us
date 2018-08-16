@@ -39,6 +39,11 @@ export default class MenuHeadContainer extends React.Component {
 		this.props.setParentState({active: "creative"})
 	}
 
+	contactClickHandler() {
+		this.setState({active: "contact"})
+		this.props.setParentState({active: "contact"})
+	}
+
 	homeClickHandler() {
 		this.setState({active: ""})
 		this.props.setParentState({active: ""})
@@ -60,6 +65,7 @@ export default class MenuHeadContainer extends React.Component {
 				<button type="button" style={styles.menuButton} onClick={this.webClickHandler.bind(this)}>web</button>
 				<button type="button" style={styles.menuButton} onClick={this.creativeClickHandler.bind(this)}>art</button>
 				<button type="button" style={styles.menuButton} onClick={this.aboutClickHandler.bind(this)}>about</button>
+				<button type="button" style={styles.menuButton} onClick={this.contactClickHandler.bind(this)}>contact</button>
 			</div>
 			</div>
 			<hr />

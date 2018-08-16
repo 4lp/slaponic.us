@@ -42,6 +42,7 @@ render() {
     }
 	return (
 			<div className="text-center">
+			<h1>👨‍💻</h1>
 			<p>
 			Hi! I'm Mike and I like to make pretty things on the computer, like websites and music and strange visuals to go along with them. 
 			</p>
@@ -57,8 +58,8 @@ render() {
 			If you're interested here is my <a href={this.props.resume.content[0].resume} target="_blank">resume</a> (click to download a .pdf).
 			</p>
 			<p>
-			I spend a lot of time keeping up with social media accounts for my music projects, <a href="https://www.facebook.com/alptrax/" target="_blank">alptrack</a>
-			 and <a href="https://hifrequenci.es" target="_blank">PHF</a>, so I don't really keep many for myself. I do however have a
+			I spend a lot of time keeping up with social media accounts for my music projects, <a href="https://www.facebook.com/alptrax/" target="_blank">alptrack </a>
+			and <a href="https://hifrequenci.es" target="_blank">PHF</a>, so I don't really keep many for myself. I do however have a
 			<a href="https://github.com/slaponicus" target="_blank"> github </a> account, an
 			<a href="mailto:mike.r.menegay@gmail.com" target="_blank"> email </a> account, and a
 			<a href="https://www.linkedin.com/in/michael-menegay-396513107" target="_blank"> linkedin </a> account you can look at.
