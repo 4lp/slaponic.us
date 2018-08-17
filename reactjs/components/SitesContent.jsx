@@ -16,10 +16,11 @@ export default class SitesContent extends React.Component {
 			marginRight:"10%",
 		  },
 		  front: {
-			  backgroundImage: "linear-gradient(rgba(255, 255, 255, 0.8), rgba(0, 0, 0, 0.45)),url("+item.image+")",
+			  backgroundImage: "linear-gradient(rgba(255, 250, 253, 1), rgba(0, 0, 0, 0.6)),url("+item.image+")",
+			  backgroundPosition: "center"
 		  },
 		  back: {
-			backgroundColor: "#eee",
+			backgroundColor: "#FFFAFD",
 		  }
 		}
 

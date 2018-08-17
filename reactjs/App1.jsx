@@ -53,6 +53,12 @@ const styles = {
     maxHeight: "700px",
 	width: "645px",
 	height: "700px"
+  },
+  sidebarRight: {
+	  borderLeft: "10px cyan groove"
+  },
+  sidebarLeft: {
+	  borderRight: "10px cyan groove"
   }
 }
 
@@ -125,7 +131,7 @@ class App1 extends React.Component {
       <div className="container-fluid" style={styles.mainContainer}>
       <div className="col-lg-12 col-md-12" style={styles.main} id="wrapper">
             <div className="row" style={styles.mainRow}>
-        <div className="col-lg-1 hidden-md hidden-sm hidden-xs sidebar"></div>
+        <div className="col-lg-1 hidden-md hidden-sm hidden-xs sidebar" style={styles.sidebarLeft}></div>
       	<div className="col-lg-10 col-md-12 col-sm-12" style={styles.main}>
       	  <MenuHeadContainer active = {this.state.active} setParentState = {this.getNewState.bind(this)}/>
           <br />
@@ -141,7 +147,7 @@ class App1 extends React.Component {
             </div>
           </div>
         </div>
-        <div className="col-lg-1 hidden-md hidden-sm hidden-xs sidebar"></div>
+        <div className="col-lg-1 hidden-md hidden-sm hidden-xs sidebar" style={styles.sidebarRight}></div>
         <div className="col-lg-12 text-center foot"></div>
       </div>
       </div>

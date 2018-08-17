@@ -34,11 +34,9 @@ export default class PicturesContainer extends React.Component {
     }
     return (
       <div>
-        <div className="row">
           {pictures.content !== undefined &&
           <PicturesContent content={pictures.content} />
           }
-        </div>
       </div>
     )
   }

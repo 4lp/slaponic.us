@@ -26,7 +26,7 @@ h1 {
 	margin-top: -20px;
 }
 
-a:hover {
+a:hover, a:active {
 	text-decoration: none;
 	color: #ed3ddb;
 	transition: .3s;
@@ -36,7 +36,7 @@ button:focus {
 	outline: none;
 }
 
-button:hover {
+button:hover, button:active {
 	color: #ed3ddb;
 	transition: .3s;
 }
@@ -127,20 +127,21 @@ button:hover {
 	perspective: 1000px;
 }
 /* flip the pane when hovered */
-.flip-container:hover .flipper, .flip-container.hover .flipper {
+.flip-container:hover .flipper, .flip-container.hover .flipper, 
+.flip-container:active .flipper, .flip-container.active .flipper  {
 	transform: rotateY(180deg);
 }
 
 .flip-container, .front {
 	width: 320px;
 	height: 500px;
-	margin: 0 10% 10% 10%;
+	margin: 0 auto 10% auto;
 }
 
 .back {
 	width: 320px;
 	height: 500px;
-	margin: 0 -10% 10% -10%;
+	margin: 0 auto 10% auto;
 }
 
 /* flip speed goes here */
@@ -176,10 +177,79 @@ button:hover {
 	border-color: #EDFFFA;
 }
 
-.btn-primary:hover{
+.btn-primary:hover, .btn-primary:active{
 	color: #000;
 	text-decoration: none;
 	background-color: #FFFAFD;
 	border-color: #FFFAFD;
 	transition: .3s;
+}
+/* masonry*/ 
+.grid {
+	margin: 0 auto;
+}
+.grid-item {
+	float: left;
+	width: 25%;
+}
+
+.grid-item--width2 { width: 160px; }
+.grid-item--height2 { height: 140px; }
+
+#bandcamp {
+		width: 100%;
+		height: auto;
+		border: 0;
+		text-align: center;
+		display: block;
+		margin: 0 auto;
+}
+
+/* MEDIA QUERIES */
+/* Large desktops and laptops */
+@media (min-width: 1200px) {
+
+}
+
+/* Landscape tablets and medium desktops */
+@media (min-width: 992px) and (max-width: 1199px) {
+
+}
+
+/* Portrait tablets and small desktops */
+@media (min-width: 768px) and (max-width: 991px) {
+
+}
+
+/* Landscape phones and portrait tablets */
+@media (max-width: 767px) {
+
+}
+
+/* Portrait phones and smaller */
+@media (max-width: 480px) {
+
+	#bandcamp {
+		width: 100%;
+		border: 0;
+	}
+
+	p {
+		font-size: 14px;
+	}
+
+	.flip-container, .front {
+		width: 220px;
+		height: 500px;
+	}
+
+	.back {
+		width: 220px;
+		height: 500px;
+	}
+
+	.grid-item {
+		float: left;
+		width: 100%;
+	}
 }
