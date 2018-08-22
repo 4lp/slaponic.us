@@ -5,6 +5,4 @@ My personal website mostly built with
 and 
 <a href="http://getbootstrap.com/">Bootstrap</a>.
 
-Todo:
-- Switch from self hosting
-- Finish sites page
+To generate bundles for production, run <code>node_modules/.bin/webpack --config webpack.prod.config.js</code>
