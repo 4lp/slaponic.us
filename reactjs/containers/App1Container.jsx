@@ -37,12 +37,12 @@ export default class App1Container extends React.Component {
 		<h1>🖥️</h1>
 		<br/>
         <p>
-        Here are some websites I&apos;ve coded and possibly designed and hosted as well! The website you&apos;re looking at now is one of them - built using Django, 
-        ReactJS, Bootstrap, HTML and CSS. In addition to these sites, I have also done web development for the Red Cross, USO, Best Friends Animal Society, the National Charity League, and other volunteer organizations.
+        Here are some websites I&apos;ve worked on - ranging anywhere from helping a little with front-end development to completely designing, coding, and hosting them! The website you&apos;re looking at now is one of my sites, built using Django, 
+        ReactJS, Bootstrap, HTML and CSS. In addition to these sites, I have also done web development for the American Red Cross, USO, Best Friends Animal Society, the National Charity League, and other volunteer organizations.
         </p>
 		<br/>
 		<p>
-		Feel free to send me an <a href="mailto:mike.r.menegay@gmail.com" target="_blank"> email </a> if you're interested in learning more!
+		Feel free to send me an <a href="mailto:mike.r.menegay@gmail.com" target="_blank"> email </a> or <a href="#" onClick={()=>this.props.setParentState({active: "contact"})}> contact </a> me if you're interested in learning more!
 		</p>
 		<br/>
         <div>

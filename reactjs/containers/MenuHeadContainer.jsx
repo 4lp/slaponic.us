@@ -17,35 +17,23 @@ const styles = {
 }
 
 export default class MenuHeadContainer extends React.Component {
-  constructor(props){
-  	super(props);
-  	this.state = {
-  	  active: this.props.active
-  	};
-  }
-
 	aboutClickHandler() {
-		this.setState({active: "about"})
 		this.props.setParentState({active: "about"})
 	}
 
 	webClickHandler() {
-		this.setState({active: "web"})
 		this.props.setParentState({active: "web"})
 	}
 
 	creativeClickHandler() {
-		this.setState({active: "creative"})
 		this.props.setParentState({active: "creative"})
 	}
 
 	contactClickHandler() {
-		this.setState({active: "contact"})
 		this.props.setParentState({active: "contact"})
 	}
 
 	homeClickHandler() {
-		this.setState({active: ""})
 		this.props.setParentState({active: ""})
 	}
 

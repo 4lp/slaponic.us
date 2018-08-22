@@ -11,6 +11,7 @@ export default class CreativeContainer extends React.Component {
 					I make weird electronic music as alptrack and footwork music with my friend Dave as PHF. I also help run <a href="https://secondmoonrecords.bandcamp.com/">Second Moon Records</a> and have a radio show 
 					on <a href="http://datafruits.fm" target="_blank">Datafruits</a> every other week where I DJ some of my favorite music. 
 					</p>				
+					<br />
 				</div>
 				<br/>
 				<div className="col-lg-6 text-center">
@@ -26,6 +27,7 @@ export default class CreativeContainer extends React.Component {
 				<br />
 				<div className="col-lg-12 text-center">
 					<p>
+					<br />
 					Here's some visual art I've done to accompany some of the music.
 					</p>
 					<br />

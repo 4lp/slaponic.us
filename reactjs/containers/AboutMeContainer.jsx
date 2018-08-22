@@ -54,8 +54,9 @@ render() {
 			modular synthesis, and cute things 💖
 			</p>
 			<p>
-			Feel free to send me an <a href="mailto:mike.r.menegay@gmail.com">email</a>! I'd love to help you make music or a website for your project or collaborate or even just chat. 
-			If you're interested here is my <a href={this.props.resume.content[0].resume} target="_blank">resume</a> (click to download a .pdf).
+			Feel free to send me an <a href="mailto:mike.r.menegay@gmail.com">email</a> or <a href="#" onClick={()=>this.props.setParentState({active: "contact"})}> contact </a> me!
+			I'd love to help you make music or a website for your project or collaborate or even just chat. 
+			If you're interested here is my <a href={this.props.resume.content[0].resume} target="_blank">resume</a> (click to download a .png).
 			</p>
 			<p>
 			I spend a lot of time keeping up with social media accounts for my music projects, <a href="https://www.facebook.com/alptrax/" target="_blank">alptrack </a>

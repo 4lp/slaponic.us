@@ -74,7 +74,7 @@ class App1 extends React.Component {
   	return (
   		<div>
         <Provider store={store}>
-          <AboutMeContainer />
+          <AboutMeContainer setParentState = {this.getNewState.bind(this)}/>
         </Provider>
       </div>
   		)
@@ -88,7 +88,7 @@ class App1 extends React.Component {
   	return (
   		<div>
   		  <Provider store={store}>
-	        <App1Container />
+	        <App1Container  setParentState = {this.getNewState.bind(this)}/>
 	      </Provider>
 	    </div>
   		)
@@ -119,7 +119,6 @@ class App1 extends React.Component {
       <div className="text-center">
 		<h1>🌺</h1>
         <div>
-		{/*<img className="mainimg" src="http://slaponic.us/static/misc/static/pink_plane.jpg" style={styles.mainImg}/>*/}
         <div className="mainimg" style={styles.mainImgContainer}/>
         </div>
       </div>
