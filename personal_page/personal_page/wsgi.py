@@ -11,8 +11,11 @@ import os, sys
 
 from django.core.wsgi import get_wsgi_application
 
-sys.path.append('/var/www/slaponic.us/slaponicus/personal_page')
-sys.path.append('/var/www/hifrequenci.es')
+
+sys.path.append('/var/www/slaponic.us/slaponic.us/bin/python')
+sys.path.append('/var/www/slaponic.us/slaponic.us/lib/python3.4/site-packages')
+sys.path.append('/var/www/slaponic.us/slaponic.us/')
+sys.path.append('/var/www/slaponic.us/slaponic.us/personal_page/')
 
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "personal_page.settings")
 

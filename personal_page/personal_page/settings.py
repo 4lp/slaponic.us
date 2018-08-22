@@ -21,7 +21,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/1.10/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-with open("./secrets.json") as f:
+with open("/var/www/slaponic.us/slaponic.us/personal_page/secrets.json") as f:
     secrets = json.loads(f.read())
 
     def get_secret(settings, secrets=secrets):
@@ -57,7 +57,7 @@ INSTALLED_APPS = [
     'rest_framework'
 ]
 
-MIDDLEWARE = [
+MIDDLEWARE_CLASSES = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -136,16 +136,16 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
 STATICFILES_DIRS = [
-    # os.path.join(BASE_DIR, './static/pictures_thumb'),
-    # os.path.join(BASE_DIR, './static/sites'),
-    # os.path.join(BASE_DIR, './static/pictures'),
-    os.path.join(BASE_DIR, '../static'),
+    os.path.join(BASE_DIR, 'static/css/'),
+    os.path.join(BASE_DIR, 'static/bundles/prod/'),
 ]
 
 WEBPACK_LOADER = {
     'DEFAULT': {
-        'BUNDLE_DIR_NAME': 'bundles/local/',  # end with slash
-        'STATS_FILE': os.path.join(BASE_DIR, '../webpack-stats-local.json'),
+        'BUNDLE_DIR_NAME': 'bundles/prod/',  # end with slash
+        'STATS_FILE': os.path.join(BASE_DIR, '../webpack-stats-prod.json'),
     }
 }
